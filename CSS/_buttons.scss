@@ -1,0 +1,76 @@
+#start__button{
+
+    width: 150px;
+    height: 60px;
+    
+    margin: 30px;
+    border:0px;
+    border-radius: 20px;
+
+    background-color: rgb(255, 97, 97);
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 30px 5px rgba(250,242,158,1);
+    }
+
+    transition: transform .5s .1s, box-shadow .5s .1s;
+    
+    
+}
+
+
+#check__button{
+
+    width: 150px;
+    height: 60px;
+    
+    margin: 30px 10px 10px 10px;
+    border: 0px;
+    border-radius: 20px;
+
+    background-color: rgb(72, 255, 0);
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 30px 5px rgb(97, 255, 118);
+    }
+
+    transition: transform .5s .1s, box-shadow .5s .1s;
+    
+    
+}
+
+#newGame__button{
+
+    width: 150px;
+    height: 60px;
+    
+    margin: 10px;
+    border:0px;
+    border-radius: 20px;
+
+    background-color: rgb(180, 54, 238);
+
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &:hover{
+        transform: scale(1.05);
+        box-shadow: 0px 0px 30px 5px rgb(248, 171, 255);
+    }
+
+    transition: transform .5s .1s, box-shadow .5s .1s;
+    
+    
+}
+

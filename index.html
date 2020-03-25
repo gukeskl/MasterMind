@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="\CSS\style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+    <!--Settings Panel-->
+    <div class="menu">
+        <div class="settings">
+
+            <p>How many round?</p>
+            <select name="raunds_number" id="rounds_number">
+                <option selected>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+            </select>
+
+            <p>Dificulty Level?</p>
+            <select name="difficulty" id="difficulty_lv">
+                <option selected>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+            </select>
+        </div>
+
+        <button id="start__button">
+            START
+        </button>
+    </div>
+
+    <!--Game Panel-->
+    <div class="game">
+
+        <div class="game__data">
+
+            <div class="game__history">
+                <div class="actual__game">
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                </div>
+                <div class="actual__game">
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                    <button class="game__option"></button>
+                </div>
+            </div>
+
+            <div class="results__div">
+                <div class="result_box">
+                    <div class="result">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="check__button">
+            Check
+        </button>
+
+        <button id="newGame__button">
+            New Game
+        </button>
+
+        <script src="/JS/testowy.js"></script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+.game{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.game__data{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.game__history{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.actual__game{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game__option{
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+
+    background-color: gray;
+
+    &:active{
+        transform: scale(1.1);
+    }
+}
