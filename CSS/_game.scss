@@ -1,38 +1,84 @@
 .game{
-    border: 1px solid red;
+ 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .game__data{
-    border: 1px solid green;
+ 
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+
+}
+.game__elements{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+
+    
 }
 
 
 .game__history{
     
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    background: transparent;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    border: 5px solid transparent;
+    border-radius: 20px;
+
+    width: fit-content;
 }
 
 .actual__game{
-    
-    display: flex;
+
+    background: transparent;
+    align-content: space-around;
     justify-content: space-around;
-    align-items: center;
+    padding: 5px;
+    border: 5px solid white;
+    border-radius: 20px;
+    flex-direction: column;
+    width: fit-content;
 }
 
-.game__option{
+.game__element{
     height: 30px;
     width: 30px;
+
+    border: 3px solid white;
 
     border-radius: 50%;
 
     background-color: gray;
+    margin: 5px;
 
-    &:active{
-        transform: scale(1.1);
-    }
 }
+
+.history__element{
+    height: 24px;
+    width: 24px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.history{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+
+
+
+

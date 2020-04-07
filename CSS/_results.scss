@@ -1,0 +1,44 @@
+.results__card{
+    
+    
+
+    background-color: white;
+
+    box-shadow: 5px 5px 22px -8px rgba(0,0,0,0.75);
+
+    border-radius: 10px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.result{
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+
+    border-radius: 50%;
+    
+    
+}
+
+.dots_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.black_dot{
+    
+    background-color: black;
+    
+}
+
+.red_dot{
+    
+    background-color: red;
+}

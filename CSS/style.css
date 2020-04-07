@@ -1,7 +1,8 @@
 body {
-  background-color: #abfafd;
+  background: #fffae7;
+  background: linear-gradient(214deg, #fffae7 0%, #a9dcff 100%);
   font-family: 'Sen', sans-serif;
-  height: 90vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,8 +24,8 @@ body {
           box-shadow: 8px 12px 32px 3px #a8a8a8;
   padding: 20px;
   text-align: center;
-  -webkit-animation: flipiny 2s ease 0s 1 normal;
-  animation: flipiny 2s ease 0s 1 normal;
+  -webkit-animation: flipiny 1s ease 0s 1 normal;
+  animation: flipiny 1s ease 0s 1 normal;
 }
 
 .menu p {
@@ -37,12 +38,7 @@ body {
 }
 
 .menu__out {
-  -webkit-transform: translateX(200px);
-          transform: translateX(200px);
-  -webkit-transition: -webkit-transform 5s;
-  transition: -webkit-transform 5s;
-  transition: transform 5s;
-  transition: transform 5s, -webkit-transform 5s;
+  display: none;
 }
 
 @-webkit-keyframes flipiny {
@@ -90,7 +86,7 @@ body {
 #start__button {
   width: 150px;
   height: 60px;
-  margin: 30px;
+  margin: 30px auto 30px auto;
   border: 0px;
   border-radius: 20px;
   background-color: #ff6161;
@@ -116,21 +112,22 @@ body {
   margin: 30px 10px 10px 10px;
   border: 0px;
   border-radius: 20px;
-  background-color: #48ff00;
+  background: #0cff77;
+  background: linear-gradient(28deg, #00ff6e 0%, rgba(137, 255, 173, 0.873564) 100%);
   font-size: 20px;
   font-weight: bold;
   color: white;
-  -webkit-transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
-  transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
-  transition: transform .5s .1s, box-shadow .5s .1s;
-  transition: transform .5s .1s, box-shadow .5s .1s, -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
+  -webkit-transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
+  transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
+  transition: transform .3s .1s, box-shadow .5s .1s;
+  transition: transform .3s .1s, box-shadow .5s .1s, -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
 }
 
 #check__button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-  -webkit-box-shadow: 0px 0px 30px 5px #61ff76;
-          box-shadow: 0px 0px 30px 5px #61ff76;
+  -webkit-box-shadow: 0px 0px 20px 5px #00eb1f;
+          box-shadow: 0px 0px 20px 5px #00eb1f;
 }
 
 #newGame__button {
@@ -139,14 +136,15 @@ body {
   margin: 10px;
   border: 0px;
   border-radius: 20px;
-  background-color: #b436ee;
+  background: #a00cff;
+  background: linear-gradient(28deg, #a00cff 0%, rgba(255, 137, 226, 0.873564) 100%);
   font-size: 20px;
   font-weight: bold;
   color: white;
-  -webkit-transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
-  transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
-  transition: transform .5s .1s, box-shadow .5s .1s;
-  transition: transform .5s .1s, box-shadow .5s .1s, -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
+  -webkit-transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
+  transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
+  transition: transform .3s .1s, box-shadow .5s .1s;
+  transition: transform .3s .1s, box-shadow .5s .1s, -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
 }
 
 #newGame__button:hover {
@@ -157,7 +155,6 @@ body {
 }
 
 .game {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,10 +162,182 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .game__data {
-  border: 1px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.game__elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.game__history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: transparent;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.actual__game {
+  background: transparent;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5px;
+  border: 5px solid white;
+  border-radius: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.game__element {
+  height: 30px;
+  width: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 5px;
+}
+
+.history__element {
+  height: 24px;
+  width: 24px;
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.color0 {
+  background-color: gray;
+}
+
+.color1 {
+  background-color: red;
+}
+
+.color2 {
+  background-color: #ff9600;
+}
+
+.color3 {
+  background-color: #00ff6a;
+}
+
+.color4 {
+  background-color: #00ccff;
+}
+
+.color5 {
+  background-color: #0004ff;
+}
+
+.color6 {
+  background-color: #cc00ff;
+}
+
+.color7 {
+  background-color: #ff0080;
+}
+
+.color8 {
+  background-color: #007e1f;
+}
+
+.color9 {
+  background-color: #ffd08a;
+}
+
+.color10 {
+  background-color: #000286;
+}
+
+.results__card {
+  background-color: white;
+  -webkit-box-shadow: 5px 5px 22px -8px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 22px -8px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.result {
+  height: 15px;
+  width: 15px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.dots_row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,36 +347,16 @@ body {
           flex-direction: row;
 }
 
-.game__history {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.black_dot {
+  background-color: black;
 }
 
-.actual__game {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.red_dot {
+  background-color: red;
 }
 
-.game__option {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: gray;
-}
-
-.game__option:active {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+header {
+  display: absolute;
+  top: 0px;
 }
 /*# sourceMappingURL=style.css.map */

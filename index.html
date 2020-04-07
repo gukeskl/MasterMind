@@ -6,20 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="\CSS\style.css">
+    <link rel="stylesheet" href=".\CSS\style.css">
     <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
-
-
     <!--Settings Panel-->
-    <div class="menu">
+    <div class="menu" >
         <div class="settings">
 
-            <p>How many round?</p>
+            <p>How many rounds?</p>
             <select name="raunds_number" id="rounds_number">
                 <option selected>4</option>
                 <option>5</option>
@@ -47,32 +45,27 @@
     <!--Game Panel-->
     <div class="game">
 
+        <!--game history, results and buttons to set the combination-->
         <div class="game__data">
 
-            <div class="game__history">
-                <div class="actual__game">
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                </div>
-                <div class="actual__game">
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                    <button class="game__option"></button>
-                </div>
-            </div>
 
-            <div class="results__div">
-                <div class="result_box">
-                    <div class="result">
-                    </div>
+            <div class="game__elements">
+                
+                <!--panel where user is setting the combination-->
+                <div class="actual__game">
+                    <!--<button class="game__option color0" id="butt_0"></button>-->
                 </div>
+                <!--panels with history and combinations results-->
+                <div class = "history">
+
+                </div>
+
             </div>
 
         </div>
 
+        <!--Button to check actual combination and button to start a new game-->
+        
         <button id="check__button">
             Check
         </button>
@@ -81,8 +74,12 @@
             New Game
         </button>
 
-        <script src="/JS/testowy.js"></script>
+        <script src="./JS/basicsEl_DOM_conection.js"></script>
+        <script src="./JS/functions.js"></script>
+        <script src="./JS/app.js"></script>
     </div>
+
+
 </body>
 
 </html>
