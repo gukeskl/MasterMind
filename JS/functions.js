@@ -1,5 +1,5 @@
 // basic functions
-function test(){
+function test() {
     console.log('work');
 }
 
@@ -15,41 +15,39 @@ function set_game_settings() {
     game_settings.numberOfColors = game_settings.difficulty_lv + 3;
 }
 
-
 // Rand color combination
-function rand_colorCombination(rowLength, colorsNumber){
+function rand_colorCombination(rowLength, colorsNumber) {
 
-    for(let i=0; i < rowLength; i++){
+    for (let i = 0; i < rowLength; i++) {
         game_settings.correct_colors_table[i] = getRandomInt(1, colorsNumber);
         console.log(game_settings.correct_colors_table[i]);
-        
+
         //chacking if colors doesnt repet
-        for(let j=0; j<i; j++)
-            if(game_settings.correct_colors_table[i] === game_settings.correct_colors_table[j])
+        for (let j = 0; j < i; j++)
+            if (game_settings.correct_colors_table[i] === game_settings.correct_colors_table[j])
                 i--;
     }
 }
 
-
 // Preparing the game panel where user can set the combination 
-function add_gameButton(butt_number){
-    IDname = 'butt_'+ butt_number;
+function add_gameButton(butt_number) {
+    IDname = 'butt_' + butt_number;
     let button = document.createElement('button');
 
     button.classList.add('game__element', 'color0');
     button.id = IDname;
 
     actual_game.appendChild(button);
-    button.addEventListener('click', function(){ 
+    button.addEventListener('click', function () {
         color_changing(butt_number);
     });
 
 }
 
-function prepare_game_panel(){
+function prepare_game_panel() {
     let butt_number;
-    for(i=0 ;i<game_settings.difficulty_lv; i++){
-        butt_number = i; 
+    for (let i = 0; i < game_settings.difficulty_lv; i++) {
+        butt_number = i;
         add_gameButton(butt_number);
         game_settings.actual_game_choices[i] = 0;
     }
@@ -62,10 +60,10 @@ function color_changing(butt_number) {
 
     changed_button.classList.remove('color' + game_settings.actual_game_choices[butt_number]);
 
-    if(game_settings.actual_game_choices[butt_number] === game_settings.numberOfColors)
+    if (game_settings.actual_game_choices[butt_number] === game_settings.numberOfColors)
         game_settings.actual_game_choices[butt_number] = 1;
-    else 
-        game_settings.actual_game_choices[butt_number] += 1; 
+    else
+        game_settings.actual_game_choices[butt_number] += 1;
 
     changed_button.classList.add('color' + game_settings.actual_game_choices[butt_number]);
 
@@ -73,20 +71,20 @@ function color_changing(butt_number) {
 
 
 //corectness of the combination
-function is_correct(){    
-    for(let i = 0; i < game_settings.correct_colors_table.length; i++)
-        if(game_settings.actual_game_choices[i] != game_settings.correct_colors_table[i])
+function is_correct() {
+    for (let i = 0; i < game_settings.correct_colors_table.length; i++)
+        if (game_settings.actual_game_choices[i] != game_settings.correct_colors_table[i])
             return false;
-    
+
     return true;
 }
 
-//chacking if colors doesnt repet
-function does_repet(){
+//chacking if colors doesnt repeat
+function does_repeat() {
 
-    for(let i=0; i < game_settings.actual_game_choices.length; i++){
-        for(let j=i+1; j<game_settings.actual_game_choices.length; j++)
-            if(game_settings.actual_game_choices[i] == game_settings.actual_game_choices[j]){
+    for (let i = 0; i < game_settings.actual_game_choices.length; i++) {
+        for (let j = i + 1; j < game_settings.actual_game_choices.length; j++)
+            if (game_settings.actual_game_choices[i] == game_settings.actual_game_choices[j]) {
                 i = j = game_settings.actual_game_choices.length;
                 return true;
             }
@@ -97,19 +95,19 @@ function does_repet(){
 
 
 //checking function
-function check(){
+function check() {
 
-    if(does_repet() === false ){
-        if(is_correct() === false)
+    if (!does_repeat()) {
+        if (!is_correct())
             add_to_history();
         else
             alert("gooooood combination");
-    }else
+    } else
         alert('your colors are repet!!!')
 }
 
 //creating history box with last game combination and the resulst of the combination
-function add_to_history(){
+function add_to_history() {
 
     //creating history box
     let history_box = document.createElement('div');
@@ -117,10 +115,10 @@ function add_to_history(){
     //creating copy of the last choices
     history_box.classList.add('game__history');
 
-    for(let i = 0; i<game_settings.actual_game_choices.length; i++){
-        let history_element = document.createElement('div');  
-        history_element.classList.add('history__element', 'color' +  game_settings.actual_game_choices[i]);
-        history_box.appendChild(history_element);    
+    for (let i = 0; i < game_settings.actual_game_choices.length; i++) {
+        let history_element = document.createElement('div');
+        history_element.classList.add('history__element', 'color' + game_settings.actual_game_choices[i]);
+        history_box.appendChild(history_element);
     }
 
     //creating card with results - black and red dots
@@ -136,44 +134,42 @@ function add_to_history(){
     let red_dots_number = 0;
     let black_dots_number = 0;
 
-    for(let i=0; i<game_settings.actual_game_choices.length; i++){
+    for (let i = 0; i < game_settings.actual_game_choices.length; i++) {
 
-        for(j = 0; j<game_settings.correct_colors_table.length; j++)
-            if(game_settings.actual_game_choices[i] === game_settings.correct_colors_table[j])
+        for (j = 0; j < game_settings.correct_colors_table.length; j++)
+            if (game_settings.actual_game_choices[i] === game_settings.correct_colors_table[j])
                 red_dots_number++;
 
-        if(game_settings.actual_game_choices[i] === game_settings.correct_colors_table[i]){
+        if (game_settings.actual_game_choices[i] === game_settings.correct_colors_table[i]) {
             black_dots_number++;
             red_dots_number--;
         }
-            
-            
     }
 
     console.log(red_dots_number);
     console.log(black_dots_number);
-    
-    while(black_dots_number>0){
+
+    while (black_dots_number > 0) {
         let black_dot = document.createElement('div');
         black_dot.classList.add('result', 'black_dot')
         black_dots_row.appendChild(black_dot);
-        
+
         black_dots_number--;
     }
-    
-    while(red_dots_number>0){
+
+    while (red_dots_number > 0) {
         let red_dot = document.createElement('div');
         red_dot.classList.add('result', 'red_dot');
         red_dots_row.appendChild(red_dot);
 
         red_dots_number--;
     }
-    
+
 
     results_box.appendChild(black_dots_row);
     results_box.appendChild(red_dots_row);
     history_box.appendChild(results_box);
-    game_history.appendChild(history_box); 
+    game_history.appendChild(history_box);
 }
 
 
