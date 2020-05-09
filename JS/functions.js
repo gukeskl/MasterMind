@@ -98,16 +98,20 @@ function does_repeat() {
 function check() {
 
     if (!does_repeat()) {
-        if (!is_correct())
+        if (!is_correct() && (game_settings.round_counter != game_settings.rounds_number))
             add_to_history();
-        else
-            alert("gooooood combination");
+        else if(game_settings.round_counter == game_settings.rounds_number)
+                alert("no more rounds!");
+            else if(is_correct)
+                    alert("good combination!");
     } else
-        alert('your colors are repet!!!')
+        alert('your colors are repeted!')
 }
 
 //creating history box with last game combination and the resulst of the combination
 function add_to_history() {
+    game_settings.round_counter++;
+    console.log(game_settings.round_counter);
 
     //creating history box
     let history_box = document.createElement('div');
@@ -146,9 +150,6 @@ function add_to_history() {
         }
     }
 
-    console.log(red_dots_number);
-    console.log(black_dots_number);
-
     while (black_dots_number > 0) {
         let black_dot = document.createElement('div');
         black_dot.classList.add('result', 'black_dot')
@@ -164,8 +165,6 @@ function add_to_history() {
 
         red_dots_number--;
     }
-
-
     results_box.appendChild(black_dots_row);
     results_box.appendChild(red_dots_row);
     history_box.appendChild(results_box);

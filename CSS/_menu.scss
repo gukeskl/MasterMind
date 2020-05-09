@@ -30,13 +30,14 @@
         width: 50%;
     
     }
+    transition: transform .5s ease-in-out;
 
 
 }
 
 
 .menu__out{
-    display: none;
+    transform: translateX(-100vw);
 }
 
 
