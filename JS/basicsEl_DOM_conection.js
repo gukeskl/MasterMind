@@ -1,3 +1,4 @@
+
 // DOM conection
 const menu_div = document.querySelector('.menu');
 const actual_game = document.querySelector('.actual__game');

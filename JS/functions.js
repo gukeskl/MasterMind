@@ -170,6 +170,3 @@ function add_to_history() {
     history_box.appendChild(results_box);
     game_history.appendChild(history_box);
 }
-
-
-

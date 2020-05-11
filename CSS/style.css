@@ -98,6 +98,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: white;
+  outline: none;
   -webkit-transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
   transition: -webkit-transform .5s .1s, -webkit-box-shadow .5s .1s;
   transition: transform .5s .1s, box-shadow .5s .1s;
@@ -122,6 +123,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: white;
+  outline: none;
   -webkit-transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
   transition: -webkit-transform .3s .1s, -webkit-box-shadow .5s .1s;
   transition: transform .3s .1s, box-shadow .5s .1s;
@@ -143,6 +145,7 @@ body {
   border-radius: 20px;
   background: #a00cff;
   background: linear-gradient(28deg, #a00cff 0%, rgba(255, 137, 226, 0.873564) 100%);
+  outline: none;
   font-size: 20px;
   font-weight: bold;
   color: white;
