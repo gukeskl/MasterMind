@@ -2,7 +2,11 @@
 
 ## Download
 
-using 'git clone https://github.com/gukeskl/MasterMind.git' command, clone the repo from github
+using 
+```
+git clone https://github.com/gukeskl/MasterMind.git
+```
+command, clone the repo from github
 or
 download repo directly from github
 
