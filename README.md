@@ -12,4 +12,4 @@ download repo directly from github
 
 ## Project Run
 
-Run 'index.html' file, from project folder, using your favorite browser
+Run 'index.html' file, from project folder, using your favourite browser
